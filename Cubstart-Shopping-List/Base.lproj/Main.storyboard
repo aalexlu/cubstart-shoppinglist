@@ -15,32 +15,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-bH-Yp2">
-                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="59r-PI-agk"/>
-                                </connections>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUT-aM-t1W">
-                                <rect key="frame" x="128" y="68" width="159" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUT-aM-t1W">
+                                <rect key="frame" x="56" y="66" width="302" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="HoU-VP-GOd"/>
+                                    <constraint firstAttribute="width" constant="302" id="fgH-l9-B7N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="33"/>
                                 <color key="textColor" red="0.19167408579610332" green="0.1972076595905782" blue="0.20334311548223349" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cVu-qi-iJ5">
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="VH3-fj-dq1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NwV-h2-mz4"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.85136442729999995" green="0.92050682110000004" blue="0.90759899460000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wUT-aM-t1W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="5jl-70-sno"/>
+                            <constraint firstItem="wUT-aM-t1W" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="shf-Fa-oJ5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="OQw-bH-Yp2" id="IEs-SC-qKL"/>
+                        <outlet property="tableView" destination="cVu-qi-iJ5" id="p1C-Qx-tJO"/>
+                        <segue destination="bij-Ly-OoK" kind="presentation" identifier="item" id="Q1C-z8-0xR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Item View Controller-->
+        <scene sceneID="XeB-0F-puX">
+            <objects>
+                <viewController id="bij-Ly-OoK" customClass="ItemViewController" customModule="Cubstart_Shopping_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="awY-7y-Vwk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-rX-dip">
+                                <rect key="frame" x="56" y="94" width="302" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="B3z-be-QBB"/>
+                                    <constraint firstAttribute="width" constant="302" id="QrS-Ze-8gm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="41"/>
+                                <color key="textColor" red="0.1916740858" green="0.1972076596" blue="0.2033431155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count: 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-Hb-jkn">
+                                <rect key="frame" x="56" y="520" width="302" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="5FR-Fi-hmM"/>
+                                    <constraint firstAttribute="height" constant="43" id="vFf-AN-LFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="31"/>
+                                <color key="textColor" red="0.1916740858" green="0.1972076596" blue="0.2033431155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1m-ZS-5KX">
+                                <rect key="frame" x="37" y="166" width="340" height="340"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="CB7-A4-iS2"/>
+                                    <constraint firstAttribute="width" constant="340" id="lEP-Kn-Qlv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sps-Hb-jkn" firstAttribute="centerX" secondItem="bKy-YH-1Y2" secondAttribute="centerX" id="0fd-tn-mAy"/>
+                            <constraint firstItem="J1m-ZS-5KX" firstAttribute="centerX" secondItem="bKy-YH-1Y2" secondAttribute="centerX" id="6cW-Aj-82g"/>
+                            <constraint firstItem="J1m-ZS-5KX" firstAttribute="top" secondItem="0Gj-rX-dip" secondAttribute="bottom" constant="8" id="AsR-TT-RnU"/>
+                            <constraint firstItem="Sps-Hb-jkn" firstAttribute="top" secondItem="J1m-ZS-5KX" secondAttribute="bottom" constant="14" id="rFW-cE-1cb"/>
+                            <constraint firstItem="0Gj-rX-dip" firstAttribute="centerX" secondItem="bKy-YH-1Y2" secondAttribute="centerX" id="tI6-xG-MdR"/>
+                            <constraint firstItem="0Gj-rX-dip" firstAttribute="top" secondItem="bKy-YH-1Y2" secondAttribute="top" constant="94" id="tve-dZ-CuU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bKy-YH-1Y2"/>
+                    </view>
+                    <connections>
+                        <outlet property="itemCount" destination="Sps-Hb-jkn" id="dZk-Hb-5Zb"/>
+                        <outlet property="itemImage" destination="J1m-ZS-5KX" id="2j6-f8-ULE"/>
+                        <outlet property="itemName" destination="0Gj-rX-dip" id="AsY-0h-HXm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNt-YS-dx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836.23188405797111" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
