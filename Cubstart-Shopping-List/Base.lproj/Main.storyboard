@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUT-aM-t1W">
-                                <rect key="frame" x="56" y="66" width="302" height="64"/>
+                                <rect key="frame" x="82" y="66" width="250" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="HoU-VP-GOd"/>
-                                    <constraint firstAttribute="width" constant="302" id="fgH-l9-B7N"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="fgH-l9-B7N"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="33"/>
                                 <color key="textColor" red="0.19167408579610332" green="0.1972076595905782" blue="0.20334311548223349" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -60,19 +60,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-rX-dip">
-                                <rect key="frame" x="56" y="94" width="302" height="64"/>
+                                <rect key="frame" x="82" y="94" width="250" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="B3z-be-QBB"/>
-                                    <constraint firstAttribute="width" constant="302" id="QrS-Ze-8gm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="QrS-Ze-8gm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="41"/>
                                 <color key="textColor" red="0.1916740858" green="0.1972076596" blue="0.2033431155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count: 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sps-Hb-jkn">
-                                <rect key="frame" x="56" y="520" width="302" height="43"/>
+                                <rect key="frame" x="82" y="520" width="250" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="302" id="5FR-Fi-hmM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="5FR-Fi-hmM"/>
                                     <constraint firstAttribute="height" constant="43" id="vFf-AN-LFh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="31"/>

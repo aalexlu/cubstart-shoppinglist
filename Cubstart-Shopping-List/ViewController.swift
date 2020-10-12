@@ -2,18 +2,16 @@
 //  ViewController.swift
 //  Cubstart-Shopping-List
 //
-//  Created by Alex Lu on 9/29/20.
+//  Created by Alex Lu on 10/11/20.
 //  Copyright © 2020 Alexandra Lu. All rights reserved.
 //
 
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemCount: UILabel!
     @IBOutlet weak var itemImage: UIImageView!
-    
 }
 
 class ViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -27,12 +25,11 @@ class ViewController : UIViewController, UITableViewDataSource, UITableViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "custom")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return itemName.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

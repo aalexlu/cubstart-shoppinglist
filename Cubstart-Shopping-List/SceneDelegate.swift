@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Cubstart-Shopping-List
 //
-//  Created by Alex Lu on 9/29/20.
+//  Created by Alex Lu on 10/11/20.
 //  Copyright © 2020 Alexandra Lu. All rights reserved.
 //
 
