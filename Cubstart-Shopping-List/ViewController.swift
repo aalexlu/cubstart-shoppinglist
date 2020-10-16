@@ -40,7 +40,7 @@ class ViewController : UIViewController, UITableViewDataSource, UITableViewDeleg
         return itemName.count
     }
     
-    /** Delegate function: For every row in this table view, set the cells to, in this case, in instance of our CustomTableViewCell */
+    /** DataSource function: For every row in this table view, set the cells to, in this case, in instance of our CustomTableViewCell */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : CustomTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "custom") as! CustomTableViewCell
         // Sets the labels/image in each row of the Table View; remember each row is a CustomTableViewCell
@@ -55,6 +55,7 @@ class ViewController : UIViewController, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Saves the row clicked by the user in a variable, so that when we perform/prepare, we can pass the correct data specific to the row clicked
         selectedIndex = indexPath.row
+        // Performs segue to ItemVC when any row is clicked
         performSegue(withIdentifier: "item", sender: self)
     }
     

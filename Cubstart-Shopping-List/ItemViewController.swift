@@ -14,7 +14,7 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemCount: UILabel!
 
-    /** variables for passing data from ViewController; set in the prepare function */
+    /** Variables for passing data from ViewController; set in the prepare function */
     var name = ""
     var image = ""
     var count = 0
